@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1(id="titlestyle")= title
+
+  if (toShow == null)
+    h2 No instance to delete
+  else
+    - let sweetmagicid = toShow._id
+    - let sweetmagicItemname = toShow.Itemname
+    - let sweetmagicQuantity = toShow.Quantity
+    - let sweetmagicprice = toShow.price
+
+    div
+      div.row
+        div(class='sweetmagicAttr mr-3') sweetmagic ID is:
+        div(class='variety stylesheetnew') #{sweetmagicid}
+      div.row
+        div(class='sweetmagicAttr mr-3') sweetmagic Itemname is:
+        div(class="variety") #{sweetmagicItemname}
+      div.row
+        div(class='sweetmagicAttr mr-3') sweetmagic Quantity is:
+        div(class="variety") #{sweetmagicQuantity}
+      div.row
+        div(class='sweetmagicAttr mr-3') sweetmagic price is:
+        div(class="variety") #{sweetmagicprice}
+    
